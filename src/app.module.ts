@@ -5,7 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://admin:admin@cluster0.qhklb.mongodb.net/employeesOpen?retryWrites=true&w=majority'),
+    MongooseModule.forRoot('mongodb+srv://admin:admin@cluster0.qhklb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   ],
   controllers: [AppController],
   providers: [AppService],
