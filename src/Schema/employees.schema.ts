@@ -4,7 +4,7 @@ import { Document } from 'mongoose';
 
 @Schema()
 
-export  class employeeSchema extends Document{
+export  class EmployeeSchema extends Document{
 
    @Prop()
    contract_type: string
