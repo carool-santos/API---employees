@@ -24,7 +24,7 @@ export class EmployeesController {
 
     @Get(':id')
     @ApiResponse({status: 200, description: 'Show an employees data successfully'})
-    @ApiResponse({status: 404, description: 'employer not found'})
+    @ApiResponse({status: 404, description: 'Employer not found'})
     @ApiOperation({ summary: 'View an employers data'})
     async getByIdEmployee(
       @Param('id') id: string) :Promise<Employee>{
@@ -40,7 +40,7 @@ export class EmployeesController {
     }
 
     @Put('id')
-    @ApiResponse({status: 200, description: 'data of an employer successfully updated'})
+    @ApiResponse({status: 200, description: 'Data of an employer successfully updated'})
     @ApiResponse({status: 404, description: 'Employer cannot be found'})
     @ApiOperation({ summary: 'Update an employee data'})
     async updateEmployee(@Param('id') id: string, @Body() updateEmployeeDto: UpdateEmployeeDto): Promise<Employee>{
@@ -48,7 +48,7 @@ export class EmployeesController {
     }
 
     @Delete(':id')
-    @ApiResponse({status: 200, description: 'data of an employer successfully updated'})
+    @ApiResponse({status: 204, description: 'Employer successfully removed'})
     @ApiResponse({status: 404, description: 'Employer cannot be found'})
     @ApiOperation({ summary: 'Delete an employee'})
     async delete(
