@@ -1,4 +1,4 @@
-import { ApiProperty } from '@nestjs/swagger'
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger'
 import { Document} from 'mongoose'
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
@@ -32,7 +32,7 @@ export class UpdateEmployeeDto extends Document{
     @IsNumber()
     main_phone=''
 
-    @ApiProperty({ description: 'telephone 2 optional', example: 33505072})
+    @ApiPropertyOptional({ description: 'telephone 2 optional', example: 33505072})
     @IsNumber()
     second_phone =''
 
