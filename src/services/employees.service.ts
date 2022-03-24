@@ -11,8 +11,8 @@ export class EmployeeService {
   ) {}
 
   async registerEmployee(employee: EmployeeSchema) {
-    const createdEmployee = new this.employesModel(employee);
-    return await createdEmployee.save();
+    const createEmployee = new this.employesModel(employee);
+    return await createEmployee.save();
   }
 
   async getAllEmployees() {
