@@ -15,16 +15,16 @@ export class Employee extends Document{
    name: string
 
    @Prop()
-   job_Title: string
+   job_title: string
 
    @Prop()
    email: string
 
    @Prop()
-   telefone_1: string
+   main_phone: string
 
    @Prop()
-   telefone_2: string
+   second_phone: string
     
 }
 
