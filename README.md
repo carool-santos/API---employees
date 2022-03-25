@@ -6,10 +6,10 @@ Dependencies to run the project
 
 ### Technologies
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [NodeJs] (https://nodejs.org/en/)
-- [Swagger](https://swagger.io/)
-- [MOngoDb](https://www.mongodb.com/)
+- [TypeScript]
+- [NodeJs] 
+- [Swagger]
+- [MOngoDb]
 ### Installation
 
 ```
@@ -21,14 +21,13 @@ Dependencies to run the project
 ### To run the project
 
 ```
-   > npm start // Dev
-   > http://localhost:4002/api/#/health
+   > npm run start:dev
   
 ```
 
 ### To acess
 
-   > http://localhost:4002/api/#/
+   > localhost:4002/api/#/
 
     you can set the port in the main.ts file in case you are running some other project on it. 
 ### Contribute to the project
