@@ -7,7 +7,7 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { ApiOkResponse, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { IndexEmployeeSwagger } from '../swagger/index-employee.swagger';
 import { Employee } from '../schemas/employees.schema';
 import { EmployeeService } from '../services/employees.service';
@@ -23,7 +23,7 @@ export class EmployeesController {
 
   @Post()
   @ApiOperation({ summary: 'Create an employee' })
-  @ApiResponse({ status: 201, description: 'Employer successfully added' })
+  @ApiOkResponse({ description: 'Employer successfully added' })
   @ApiResponse({
     status: 400,
     description: 'You have not created an employee. Please check data',
@@ -41,10 +41,7 @@ export class EmployeesController {
   }
 
   @Get(':id')
-  @ApiResponse({
-    status: 200,
-    description: 'Show an employees data successfully',
-  })
+  @ApiOkResponse({description: 'Show an employees data successfully' })
   @ApiResponse({
     status: 404,
     description: 'Employer not found',
@@ -56,22 +53,14 @@ export class EmployeesController {
   }
 
   @Get()
-  @ApiResponse({
-    status: 200,
-    description: 'Show all employees data successfully',
-    type: IndexEmployeeSwagger,
-    isArray: true,
-  })
+  @ApiOkResponse({ description: 'Show all employees data successfully',  type: IndexEmployeeSwagger, isArray: true })
   @ApiOperation({ summary: 'View all employee data' })
   async getAllEmployees(): Promise<Employee[]> {
     return this.employeeService.getAllEmployees();
   }
 
   @Put('id')
-  @ApiResponse({
-    status: 200,
-    description: 'Data of an employer successfully updated',
-  })
+  @ApiOkResponse({ description: 'Data of an employer successfully updated'})
   @ApiResponse({
     status: 400,
     description: 'Incorrect Data',
